@@ -1,2 +1,3 @@
-# VirgilSecurity
+# virgil-security
+
 What is JWT?
