@@ -1,13 +1,15 @@
 # JSON Web Tokens
 
 ### What is JWT?
-**JWT** _(JSON Web Token)_ is an open, industry standard ([RFC 7519](https://tools.ietf.org/html/rfc7519)) that defines a compact and self-contained method for securely transmitting information between parties as a JSON object. It can be used by client and server to authenticate and share information easily. This information can be verified and trusted because it is digitally signed.
+**JWT** _(JSON Web Token)_ is an open, industry standard ([RFC 7519](https://tools.ietf.org/html/rfc7519)) that defines a compact and self-contained method for securely transmitting information between parties as a JSON object. It can be used by a client and a server to authenticate and share information easily. This information can be verified and trusted because it is digitally signed.
 
 JWTs can be signed using a secret (with the _HMAC_ algorithm) or a public/private key pair using _RSA_ or _ECDSA_.
 
-See this [Diagram](https://www.lucidchart.com/invitations/accept/a1e6d9d4-ed9e-4f6f-b41c-85f0c42a5aed) to figure JWT scheme of work out.
+See this the following diagram to figure JWT scheme of work out.
 
-### What is JWT structure? 
+![Diagram](diagram.png)
+
+### What is JWT structure?
 JSON Web Tokens consist of three parts separated by dots ```(.)```, which are:
 * Header
 * Payload
@@ -24,7 +26,7 @@ The header typically consists of two parts:
 1. The signing algorithm being used (such as _HMAC SHA256_ or _RSA_).
 
 For example:
-```
+```json
 {
   "alg": "HS256",
   "typ": "JWT"
@@ -36,7 +38,8 @@ The second part of the token is the payload, which contains the claims. Claims a
 
 An example of the payload:
 
-```{
+```json
+{
   "iss": "7626d4b2-695c-46f8-a8f3-8f53b79c6d85",
   "sub": {
     "company": "Virgil Security",
