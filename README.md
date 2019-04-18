@@ -7,7 +7,7 @@ JWTs can be signed using a secret (with the _HMAC_ algorithm) or a public/privat
 
 See this the following diagram to figure JWT scheme of work out.
 
-![Diagram](diagram.png)
+![Diagram](Diagram.png)
 
 ### What is JWT structure?
 JSON Web Tokens consist of three parts separated by dots ```(.)```, which are:
